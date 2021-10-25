@@ -1,0 +1,18 @@
+@font-face {
+    font-family: bloodcrow;
+    src: url(../assets/bloodcrow.ttf);
+}
+
+body {
+    background-image: url(../assets/image.PNG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: bloodcrow, sans-serif;
+    overflow: hidden;
+}
+
+h1{ 
+    text-align: center;
+    font-size: 4.5rem;
+}

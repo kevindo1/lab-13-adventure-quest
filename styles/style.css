@@ -1,25 +1,37 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-image: url(../assets/background.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-input {
-    margin: 20px;
+
+#logo {
+    width: 400px;
+    height: 250px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #characters {
-    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+input {
+    margin: 20px;
 }
 
 img {
     height: 200px;
     width: 200px;
-    margin-top: 50px;
+    margin-top: 40px;
     margin-bottom: 50px;
+    padding: 20px 0px 20px 20px;
 }
 
 input[type=radio] {
@@ -31,5 +43,5 @@ input[type=radio] + img {
 }
 
 input[type=radio]:checked + img {
-    border: 5px solid blue;
+    border: 5px solid rgb(52, 52, 79);
 }

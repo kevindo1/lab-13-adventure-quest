@@ -15,23 +15,25 @@
 </head>
 
 <body>
-    <img src="./assets/logo.png" alt="Demon Slayer Logo">
-    <div id="characters">
-        <label>
-            <input name="character" type="radio">
-            <img src="./assets/tanjiro.png" alt="">
-        </label>
-        <label>
-            <input name="character" type="radio">
-            <img src="./assets/zenitsu.png" alt="">
-        </label>
-        <label>
-            <input name="character" type="radio">
-            <img src="./assets/inosuke.png" alt="">
-        </label>
-    </div>
-    <input placeholder="name your character"></input>
-    <button>Submit</button>
+    <form id="main-form">
+        <img id="logo" src="./assets/logo.png" alt="Demon Slayer Logo">
+        <div id="characters">
+            <label>
+                <input name="race" type="radio" required value="tanjiro">
+                <img src="./assets/tanjiro.png" alt="">
+            </label>
+            <label>
+                <input name="race" type="radio" required value="zenitsu">
+                <img src="./assets/zenitsu.png" alt="">
+            </label>
+            <label>
+                <input name="race" type="radio" required value="inosuke">
+                <img src="./assets/inosuke.png" alt="">
+            </label>
+        </div>
+        <input id="input-name" placeholder="Name your character"></input>
+        <button>Begin Journey</button>
+    </form>
     <script type="module" src="./app.js"></script>
 </body>
 
