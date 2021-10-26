@@ -80,7 +80,7 @@ test('scoreQuest will update hp, gold, and quests completed on userObject', (exp
     };
     const questId = 'final';
 
-    scoreQuest(choiceObject, userObject, questId);
+    scoreQuest(choiceObject, questId, userObject);
 
     expect.equal(userObject.hp, 40);
     expect.equal(userObject.gold, 50);

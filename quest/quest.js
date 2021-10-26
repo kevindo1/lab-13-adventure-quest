@@ -1,5 +1,5 @@
 import quests from "../data/questsData.js";
-import { findById } from "../utils.js";
+import { findById, getUser, setUser, scoreQuest } from "../utils.js";
 
 const params = new URLSearchParams(window.location.search); 
 
@@ -31,5 +31,42 @@ for (let choice of questData.choices) {
 }
 
 const button = document.createElement('button');
-button.textContent = 'Choose my choice';
+button.textContent = 'Choose';
 questChoices.append(button);
+
+questChoices.addEventListener('submit', (e)=> {
+    // collects the selected choice from the radios
+    // gets user data 
+    // updates the user data depending on choice
+    // set back into the local storage
+    // show the result paragraph
+    // show link back to map
+
+    e.preventDefault();
+
+    const selectedRadio = document.querySelector('input[type="radio"]:checked');
+    const userChoice = findById(questData.choices, selectedRadio.value);
+    
+    const userInfo = getUser();
+    
+    scoreQuest(userChoice, questData.id, userInfo)
+    setUser(userInfo);
+
+    const questDetails = document.getElementById('quest-details');
+    questDetails.classList.add('hidden');
+    const questResults = document.getElementById('quest-results');
+    const resultParagraph = document.createElement('p');
+    resultParagraph.textContent = userChoice.result;
+    const backButton = document.createElement('a')
+    backButton.href = '../map';
+    backButton.textContent = 'Back to the Map';
+
+    questResults.append(resultParagraph, backButton);
+
+    questResults.classList.remove('hidden');
+});
+// export function scoreQuest(choiceObject, userObject, questId) {
+//     userObject.hp += choiceObject.hp;
+//     userObject.gold += choiceObject.gold;
+//     userObject.completed[questId] = true;
+// }
