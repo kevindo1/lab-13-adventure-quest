@@ -16,3 +16,14 @@ h1{
     text-align: center;
     font-size: 4.5rem;
 }
+
+#map-links {
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    
+}
+
+a {
+    text-decoration: none;
+}
