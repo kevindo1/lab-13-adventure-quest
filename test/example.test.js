@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { setUser, generateUser } from "../utils.js";
+import { setUser, generateUser, getUser, scoreQuest } from "../utils.js";
 const test = QUnit.test;
 
 test('generateUser should generate the formData with name, race, gold, and hp', (expect) => {
@@ -42,4 +42,48 @@ test('setUser should save the information into localStorage', (expect) => {
     const actual = JSON.parse(localStorage.getItem('USER'));
 
     expect.deepEqual(actual, expected);
+});
+
+test('getUser should retrieve the localStorage', (expect) => {
+    localStorage.removeItem('USER');
+    const expected = {
+        completed: {},
+        gold: 0,
+        hp: 50,
+        name: 'test name',
+        race: 'tanjiro',
+    };
+
+    setUser(expected);
+
+    const actual = getUser();
+
+    expect.deepEqual(actual, expected)
+});
+
+test('scoreQuest will update hp, gold, and quests completed on userObject', (expect) => {
+    const userObject = {
+        completed: {},
+        gold: 0,
+        hp: 50,
+        name: 'test name',
+        race: 'tanjiro',
+    };
+    const choiceObject = {
+        id: 'strength',
+        description: 'Look for the biggest demon to fight',
+        result: `
+            You're a brave fighter and you look for the strongest demon to prove your strength. You find him after searching a bit and get in a difficult battle. You gain 50 gold for it but lose 20 HP in the process. 
+        `,
+        hp: -10,
+        gold: 50
+    };
+    const questId = 'final';
+
+    scoreQuest(choiceObject, userObject, questId);
+
+    expect.equal(userObject.hp, 40);
+    expect.equal(userObject.gold, 50);
+    expect.equal(userObject.completed[questId], true);
+
 });
