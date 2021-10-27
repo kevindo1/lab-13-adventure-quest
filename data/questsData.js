@@ -2,8 +2,8 @@ const finalSelection = {
     id: 'final',
     title: 'Final Selection',
     map: {
-        top: '20%',
-        left: '50%',
+        top: '70%',
+        right: '42%'
     },
     image: '../assets/fight-1.jpg',
     description: `
@@ -31,7 +31,7 @@ const finalSelection = {
         result: `
             You are too scared to face the demons. You didn't even want to be here. You try to flee but a quick demon senses your fear and attacks you before a fellow demon slayer comes to protect you. You gain 0 gold and lose 20 HP. 
         `,
-        hp: -20,
+        hp: -30,
         gold: 0
     }]
 };
@@ -40,8 +40,8 @@ const demons = {
     id: 'demons',
     title: 'Sibling Demons',
     map: {
-        top: '60%',
-        right: '66%'
+        top: '32%',
+        right: '57%',
     },
     prerequisites: ['final'],
     image: '../assets/fight-2.jpeg',
@@ -79,8 +79,8 @@ const spiders = {
     id: 'spiders',
     title: 'Spider Demons',
     map: {
-        top: '60%',
-        right: '20%'
+        top: '20%',
+        right: '10%'
     },
     prerequisites: ['final', 'demons'],
     image: '../assets/fight-3.png',

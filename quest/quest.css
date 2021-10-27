@@ -7,7 +7,7 @@ body {
     background-image: url(../assets/background.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: stretch;
     font-family: bloodcrow;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -29,11 +29,37 @@ main {
     flex-direction: column;
 }
 
+#quest-details, #quest-results {
+    width: 80%;
+}
+a {
+    justify-content: center;
+}
+
 button {
     width: 300px;
     margin: auto;
+    margin-bottom: 30px;
 }
 
 .hidden {
     display: none;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-class {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+#avatar-div img {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
 }

@@ -7,7 +7,7 @@ test('generateUser should generate the formData with name, race, gold, and hp', 
     //Arrange
 
     const formData = new FormData();
-    formData.set('name', 'test name');
+    formData.set('name', 'tangerine');
     formData.set('race', 'tanjiro');
 
     // Set up your arguments and expectations
