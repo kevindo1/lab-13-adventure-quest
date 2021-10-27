@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { generateUser, setUser } from "./utils.js";
+import { generateUser, setUser } from './utils.js';
 // initialize global state
 
 // set event listeners 

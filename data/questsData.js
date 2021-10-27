@@ -73,7 +73,7 @@ const demons = {
         hp: -30,
         gold: 0
     }]
-}
+};
 
 const spiders = {
     id: 'spiders',
@@ -112,7 +112,7 @@ const spiders = {
         hp: -30,
         gold: 0
     }]
-}
+};
 
 const quests = [
     finalSelection, 

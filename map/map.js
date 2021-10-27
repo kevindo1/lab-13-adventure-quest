@@ -1,4 +1,4 @@
-import quests from "../data/questsData.js";
+import quests from '../data/questsData.js';
 
 const mapLinks = document.getElementById('map-links');
 

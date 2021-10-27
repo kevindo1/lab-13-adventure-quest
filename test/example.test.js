@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { setUser, generateUser, getUser, scoreQuest, haveCompletedAllQuests } from "../utils.js";
+import { setUser, generateUser, getUser, scoreQuest, haveCompletedAllQuests } from '../utils.js';
 const test = QUnit.test;
 
 test('generateUser should generate the formData with name, race, gold, and hp', (expect) => {
@@ -58,7 +58,7 @@ test('getUser should retrieve the localStorage', (expect) => {
 
     const actual = getUser();
 
-    expect.deepEqual(actual, expected)
+    expect.deepEqual(actual, expected);
 });
 
 test('scoreQuest will update hp, gold, and quests completed on userObject', (expect) => {
@@ -93,7 +93,7 @@ test('haveCompletedAllQuests returns true if all quests have been completed', (e
         completed: { final: true, demons: true, spiders: true }
     };
     
-    const actual = haveCompletedAllQuests(userObject)
+    const actual = haveCompletedAllQuests(userObject);
 
     expect.equal(actual, true);
 });
@@ -103,7 +103,7 @@ test('haveCompletedAllQuests returns true if all quests have been completed', (e
         completed: { final: true, demons: true }
     };
     
-    const actual = haveCompletedAllQuests(userObject)
+    const actual = haveCompletedAllQuests(userObject);
 
     expect.equal(actual, false);
 });

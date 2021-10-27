@@ -1,5 +1,5 @@
-import quests from "../data/questsData.js";
-import { findById, getUser, setUser, scoreQuest } from "../utils.js";
+import quests from '../data/questsData.js';
+import { findById, getUser, setUser, scoreQuest } from '../utils.js';
 
 const params = new URLSearchParams(window.location.search); 
 
@@ -27,7 +27,7 @@ for (let choice of questData.choices) {
     const span = document.createElement('span');
     span.textContent = choice.description;
     label.append(input, span);
-    questChoices.append(label)
+    questChoices.append(label);
 }
 
 const button = document.createElement('button');
@@ -49,7 +49,7 @@ questChoices.addEventListener('submit', (e)=> {
     
     const userInfo = getUser();
     
-    scoreQuest(userChoice, questData.id, userInfo)
+    scoreQuest(userChoice, questData.id, userInfo);
     setUser(userInfo);
 
     const questDetails = document.getElementById('quest-details');
@@ -57,7 +57,7 @@ questChoices.addEventListener('submit', (e)=> {
     const questResults = document.getElementById('quest-results');
     const resultParagraph = document.createElement('p');
     resultParagraph.textContent = userChoice.result;
-    const backButton = document.createElement('a')
+    const backButton = document.createElement('a');
     backButton.href = '../map';
     backButton.textContent = 'Back to the Map';
 
