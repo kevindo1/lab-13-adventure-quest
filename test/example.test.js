@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { setUser, generateUser, getUser, scoreQuest } from "../utils.js";
+import { setUser, generateUser, getUser, scoreQuest, haveCompletedAllQuests } from "../utils.js";
 const test = QUnit.test;
 
 test('generateUser should generate the formData with name, race, gold, and hp', (expect) => {
@@ -87,3 +87,16 @@ test('scoreQuest will update hp, gold, and quests completed on userObject', (exp
     expect.equal(userObject.completed[questId], true);
 
 });
+
+test('haveCompletedAllQuests returns true if all quests have been completed', (expect) => {
+    const userObject = {
+        completed: { final: true, demons: true, spiders: true }
+    };
+    
+    const actual = haveCompletedAllQuests(userObject)
+
+    expect.equal(actual, true);
+
+});
+
+

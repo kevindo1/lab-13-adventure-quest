@@ -1,3 +1,5 @@
+import quests from './data/questsData.js'
+
 export function findById(items, id) {
     for (let item of items) { 
         if (item.id === id) {
@@ -30,4 +32,13 @@ export function scoreQuest(choiceObject, questId, userObject) {
     userObject.hp += choiceObject.hp;
     userObject.gold += choiceObject.gold;
     userObject.completed[questId] = true;
+};
+
+export function haveCompletedAllQuests (userObject) {
+    for (let quest of quests) {
+        if (!userObject.completed[quest.id]){
+            return false;
+        }
+    }
+    return true;
 }
