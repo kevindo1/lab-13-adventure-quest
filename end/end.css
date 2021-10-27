@@ -14,3 +14,14 @@ body {
     background-size: cover;
     text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
 }
+
+img {
+    height: 300px;
+    width: 300px;
+    margin-top: 40px;
+    padding: 0px 0px 0px 20px;
+}
+
+button {
+    margin-top: 40px;
+}
