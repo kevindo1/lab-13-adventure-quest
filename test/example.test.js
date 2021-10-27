@@ -96,7 +96,14 @@ test('haveCompletedAllQuests returns true if all quests have been completed', (e
     const actual = haveCompletedAllQuests(userObject)
 
     expect.equal(actual, true);
-
 });
 
+test('haveCompletedAllQuests returns true if all quests have been completed', (expect) => {
+    const userObject = {
+        completed: { final: true, demons: true }
+    };
+    
+    const actual = haveCompletedAllQuests(userObject)
 
+    expect.equal(actual, false);
+});
