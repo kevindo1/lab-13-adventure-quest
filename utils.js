@@ -42,3 +42,20 @@ export function haveCompletedAllQuests(userObject) {
     }
     return true;
 }
+
+export function userProfile() {
+    // get user info from local storage
+    const user = getUser();
+    // update DOM with the updated user info
+    const img = document.getElementById('avatar-image');
+    img.src = `../assets/${user.race}.png`;
+
+    const name = document.getElementById('name');
+    name.textContent = user.name;
+
+    const gold = document.getElementById('gold');
+    gold.textContent = `Gold: ${user.gold}`;
+
+    const hp = document.getElementById('hp');
+    hp.textContent = `HP: ${user.hp}`;
+}

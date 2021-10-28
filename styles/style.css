@@ -43,5 +43,23 @@ input[type=radio] + img {
 }
 
 input[type=radio]:checked + img {
-    border: 5px solid rgb(52, 52, 79);
+    border: 5px solid #2451ab;
+}
+
+button {
+    margin-bottom: 40px;
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #FFF;
+    background-color: #2451ab;
+    position: all 0.2s;
+}
+
+button:hover {
+    background-color: #0e4260;
 }
