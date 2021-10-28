@@ -2,12 +2,12 @@ import quests from '../data/questsData.js';
 import { getUser, haveCompletedAllQuests, userProfile } from '../utils.js';
 
 const mapLinks = document.getElementById('map-links');
-const user = getUser()
+const user = getUser();
 
 userProfile();
 
 if (user.hp <= 0 || haveCompletedAllQuests(user)){
-    window.location.replace('../end')
+    window.location.replace('../end');
 }
 
 for (let quest of quests) {
@@ -16,7 +16,7 @@ for (let quest of quests) {
     } else {
         displayLink(quest);
     }
-};
+}
 
 function displayLink(quest) {
     const a = document.createElement('a');
@@ -27,7 +27,7 @@ function displayLink(quest) {
     a.style.left = quest.map.right; 
 
     mapLinks.appendChild(a);
-};
+}
 
 function displaySpan(quest) {
     const span = document.createElement('span');
@@ -38,4 +38,4 @@ function displaySpan(quest) {
     span.style.left = quest.map.right;
 
     mapLinks.appendChild(span);
-};
+}

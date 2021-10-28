@@ -11,13 +11,14 @@ body {
     background-image: url(../assets/background.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: stretch;
     text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
 }
 
 h1{ 
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 2rem;
+    width: 70%;
 }
 
 #map-links {
@@ -28,6 +29,7 @@ h1{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border: 5px black solid;
     width: 90vw;
     height: calc(90vw * 895 / 527);
     position: relative;
@@ -53,4 +55,5 @@ a {
     flex-direction: row;
     height: 120px;
 }
+
 

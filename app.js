@@ -16,6 +16,6 @@ mainForm.addEventListener('submit', (e)=> {
     const userSelect = generateUser(formData);
 
     setUser(userSelect);
-    console.log(userSelect.name)
+    console.log(userSelect.name);
     window.location.replace('./map');
 });
