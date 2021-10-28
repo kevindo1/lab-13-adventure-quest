@@ -85,7 +85,7 @@ const spiders = {
     prerequisites: ['final', 'demons'],
     image: '../assets/fight-3.png',
     description: `
-        After being defeating many demons, you are given a new task to clear the forest of demons. When you get there, you find a very strong looking spider demons; the spider demon queen.
+        After defeating many demons, you are given a new task to clear the forest of demons. When you get there, you find a very strong looking spider demons; the spider demon queen.
     `,
     choices: [{
         id: 'fight',
